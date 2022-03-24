@@ -16,7 +16,10 @@ router.post("/login", (req, res) => {
     res.redirect("/route/dashboard");
     //res.end("Login Successful...!");
   } else {
-    res.end("Invalid Username");
+    res.render("base", {
+      title: "Express",
+      invalidUser: "Invalid Username!",
+    });
   }
 });
 
